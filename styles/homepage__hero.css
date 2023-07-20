@@ -1,0 +1,32 @@
+#hero {
+  height: 100vh;
+  position: relative;
+}
+
+.bg-graphics {
+  position: absolute;
+  top: -20vh;
+
+  width: 100%;
+  max-height: 10vh;
+  z-index: -1;
+}
+
+.bg-graphics img {
+  width: inherit;
+  height: 100%;
+  object-fit: fill;
+}
+
+#hero-img-container {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero-img-container img {
+  max-width: 100%;
+  height: auto;
+}

@@ -20,8 +20,13 @@
   padding: 0;
 }
 
-body {
+body, h1, h2, h3, h4, h5, h6, p, input, label {
   font-family: 'Outfit', sans-serif;
+}
+h1{
+  font-size: 48px;
+  color: var(--purple-700);
+  font-weight: 700;
 }
 
 /* Layout utility classes */
@@ -36,9 +41,20 @@ body {
 }
 
 .js-center {
+  align-items: center;
   justify-content: center;
 }
+.js-space-around{
+  align-items: center;
+  justify-content: space-around;
+}
 
+.al-center{
+  align-items: center;
+}
+.al-baseline{
+  align-items: baseline;
+}
 /* spacing classes */
 .space-25 {
   width: 25%;
@@ -56,8 +72,9 @@ nav {
   padding: 0.5rem 1rem;
   position: fixed;
   width: 100%;
+  z-index: 1;
 
-  background: rgba(17, 4, 54, 0.30);
+  background: rgba(17, 4, 54, 0.3);
   backdrop-filter: blur(12px);
   box-shadow: 0px 2px 15px 3px #000;
 }
