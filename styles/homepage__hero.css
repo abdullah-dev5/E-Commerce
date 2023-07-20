@@ -1,8 +1,19 @@
 #hero {
   height: 100vh;
   position: relative;
-}
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#hero-container{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
 .bg-graphics {
   position: absolute;
   top: -20vh;
@@ -22,11 +33,24 @@
   max-width: 100%;
   height: auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
 #hero-img-container img {
   max-width: 100%;
   height: auto;
+  border-radius: 1rem;
+}
+#search-menu{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+#search-menu input[type=text]{
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 2px solid var(--grey-500);
+  padding: 0.5rem;
 }

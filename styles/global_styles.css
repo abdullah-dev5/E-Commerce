@@ -20,12 +20,28 @@
   padding: 0;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, input, label {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+label {
   font-family: 'Outfit', sans-serif;
 }
-h1{
+
+h1 {
   font-size: 48px;
-  color: var(--purple-700);
+  color: var(--purple-800);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 38px;
+  color: var(--purple-800);
   font-weight: 700;
 }
 
@@ -44,17 +60,20 @@ h1{
   align-items: center;
   justify-content: center;
 }
-.js-space-around{
+
+.js-space-around {
   align-items: center;
   justify-content: space-around;
 }
 
-.al-center{
+.al-center {
   align-items: center;
 }
-.al-baseline{
+
+.al-baseline {
   align-items: baseline;
 }
+
 /* spacing classes */
 .space-25 {
   width: 25%;
@@ -66,6 +85,10 @@ h1{
 
 .space-75 {
   width: 75%;
+}
+
+.gap-1 {
+  gap: 1rem;
 }
 
 nav {

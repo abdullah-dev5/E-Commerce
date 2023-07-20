@@ -1,0 +1,10 @@
+#show-off{
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#show-off img{
+  border-radius: 1rem;
+}
