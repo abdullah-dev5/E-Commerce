@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+  --purple-100: #CFC2F2;
+  --purple-200: #AD92F5;
+  --purple-300: #8A66ED;
+  --purple-400: #6C3CEC;
+  --purple-500: #5523DE;
+  --purple-600: #4013BF;
+  --purple-700: #2F0D8D;
+  --purple-800: #22076A;
+  --purple-900: #110436;
+
+  --black-500: #2B2D2D;
+  --grey-500: #D9D9D9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Layout utility classes */
+.fl-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.fl-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.js-center {
+  justify-content: center;
+}
+
+/* spacing classes */
+.space-25 {
+  width: 25%;
+}
+
+.space-50 {
+  width: 50%;
+}
+
+.space-75 {
+  width: 75%;
+}
+
+nav {
+  padding: 0.5rem 1rem;
+  position: fixed;
+  width: 100%;
+
+  background: rgba(17, 4, 54, 0.30);
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 2px 15px 3px #000;
+}
+
+a {
+  padding: 8px 16px;
+  border-radius: 4px;
+
+  text-decoration: none;
+  color: var(--black-500);
+  font-weight: 700;
+  text-transform: uppercase;
+
+  transition: background-color 0.3s;
+  color: #fff;
+}
+
+a:hover {
+  background-color: var(--purple-300);
+}
+
+#active {
+  border-radius: 4px;
+  color: #fff;
+  background-color: var(--purple-500);
+}
+
+#nav-links {
+  gap: 0.5rem;
+}
