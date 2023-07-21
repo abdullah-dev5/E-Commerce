@@ -75,3 +75,11 @@
 #newsletter button {
   font-size: 1rem;
 }
+
+@media (max-width:768px) {
+  #contact {
+    justify-content: center;
+    height: 60vh;
+    padding: 1rem;
+  }
+}

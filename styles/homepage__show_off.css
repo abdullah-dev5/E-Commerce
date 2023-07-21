@@ -1,10 +1,30 @@
-#show-off{
+#show-off {
   padding: 3rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-#show-off img{
+
+#show-off img {
   border-radius: 1rem;
+}
+
+@media (max-width:768px) {
+  #show-off {
+    margin: 1rem;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+  }
+
+  #show-off div {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #show-off img {
+    max-width: 90%;
+    display: blocks;
+    margin: 0 auto;
+  }
 }
