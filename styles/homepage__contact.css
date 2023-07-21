@@ -1,0 +1,10 @@
+#contact{
+  text-align: center;
+  background: url("../assets/img/mesh_gradient_bg.jpeg") no-repeat fixed;
+  height: 100vh;
+  padding-top: 64px;
+}
+#contact h2{
+  margin-bottom: 64px;
+  text-transform: uppercase;
+}
