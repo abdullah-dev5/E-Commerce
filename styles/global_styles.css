@@ -47,6 +47,99 @@ h2 {
   font-weight: 700;
 }
 
+/* navbar STARTED */
+nav {
+  padding: 0.5rem 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  background: rgba(7, 1, 22, 0.3);
+  backdrop-filter: blur(12px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#brand-logo {
+  position: absolute;
+  left: 14px;
+  width: 200px;
+  height: fit-content;
+}
+
+#brand-logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#cart-logo {
+  position: absolute;
+  right: 14px;
+  aspect-ratio: 1/1;
+  width: 24px;
+}
+
+a {
+  padding: 8px 16px;
+  border-radius: 4px;
+
+  text-decoration: none;
+  color: var(--black-500);
+  font-weight: 700;
+  text-transform: uppercase;
+
+  transition: background-color 0.3s;
+  color: #fff;
+}
+
+a:hover {
+  background-color: var(--purple-300);
+}
+
+#active {
+  border-radius: 4px;
+  color: #fff;
+  background-color: var(--purple-500);
+}
+
+#nav-links {
+  gap: 0.5rem;
+}
+/* navbar ENDED */
+
+/* Footer */
+.txt-rtl {
+  text-align: right;
+}
+
+footer {
+  padding: 1.25rem;
+  background-color: var(--purple-900);
+  color: #fff;
+  font-weight: 700;
+}
+
+.button-solid {
+  padding: 8px;
+  border: none;
+  color: #fff;
+
+  background-color: var(--purple-500);
+  font-size: 14px;
+  font-weight: 700;
+
+  border-radius: 4px;
+
+  transition: background 0.2s ease-out;
+}
+
+.button-solid:hover {
+  background-color: var(--purple-700);
+}
+
 /* Layout utility classes */
 .fl-row {
   display: flex;
@@ -91,60 +184,5 @@ h2 {
 
 .gap-1 {
   gap: 1rem;
-}
-
-nav {
-  padding: 0.5rem 1rem;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-
-  background: rgba(17, 4, 54, 0.3);
-  backdrop-filter: blur(12px);
-  box-shadow: 0px 2px 15px 3px #000;
-}
-
-a {
-  padding: 8px 16px;
-  border-radius: 4px;
-
-  text-decoration: none;
-  color: var(--black-500);
-  font-weight: 700;
-  text-transform: uppercase;
-
-  transition: background-color 0.3s;
-  color: #fff;
-}
-
-a:hover {
-  background-color: var(--purple-300);
-}
-
-#active {
-  border-radius: 4px;
-  color: #fff;
-  background-color: var(--purple-500);
-}
-
-#nav-links {
-  gap: 0.5rem;
-}
-
-.button-solid {
-  padding: 8px;
-  border: none;
-  color: #fff;
-
-  background-color: var(--purple-500);
-  font-size: 14px;
-  font-weight: 700;
-
-  border-radius: 4px;
-
-  transition: background 0.2s ease-out;
-}
-.button-solid:hover{
-  background-color: var(--purple-700);
 }
 

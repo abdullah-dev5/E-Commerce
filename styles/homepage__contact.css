@@ -40,17 +40,21 @@
 #social-link-container .social-link {
   border-radius: 100%;
   background-color: var(--purple-100);
-  width: fit-content;
-  padding: 8px;
-  aspect-ratio: 1/1;
-}
-
-.social-link img {
   width: 48px;
-  aspect-ratio: 1/1;
+  height: 48px;
+  padding: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--purple-800);
 }
 
-#newsletter{
+.social-link i {
+  color: var(--purple-100);
+}
+
+#newsletter {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -59,13 +63,15 @@
 
   width: 100%;
 }
-#newsletter input[type=text]{
+
+#newsletter input[type=text] {
   width: 100%;
   border-radius: 0.25rem;
   border: 2px solid var(--grey-500);
   padding: 1rem;
   font-size: 1rem;
 }
-#newsletter button{
+
+#newsletter button {
   font-size: 1rem;
 }
