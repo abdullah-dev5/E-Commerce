@@ -50,7 +50,11 @@
 }
 #search-menu input[type=text]{
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   border: 2px solid var(--grey-500);
   padding: 0.5rem;
+  font-size: 1rem;
+}
+#search-menu button{
+  font-size: 1rem;
 }
