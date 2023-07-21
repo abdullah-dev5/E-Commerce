@@ -14,7 +14,8 @@
 }
 
 #deals {
-  margin: 10%;
+  background-color: var(--grey-500);
+  padding: 10%;
 }
 
 .card-container {
