@@ -18,6 +18,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body,
@@ -29,7 +30,8 @@ h5,
 h6,
 p,
 input,
-label {
+label,
+button {
   font-family: 'Outfit', sans-serif;
 }
 
@@ -127,4 +129,21 @@ a:hover {
 
 #nav-links {
   gap: 0.5rem;
+}
+
+.button-solid {
+  padding: 8px;
+  border: none;
+  color: #fff;
+
+  background-color: var(--purple-500);
+  font-size: 14px;
+  font-weight: 700;
+
+  border-radius: 4px;
+
+  transition: background 0.2s ease-out;
+}
+.button-solid:hover{
+  background-color: var(--purple-700);
 }
