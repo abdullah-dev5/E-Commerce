@@ -71,13 +71,28 @@ function clearContent(element) {
   // Remove the "active-filter" class from all elements with class "category"
   $("#categories .category").removeClass("active-filter");
 
-  // Add the "active-filter" class to the clicked element
-  $(`#${element}`).addClass("active-filter");
+  if (element != "default") {
+    // Add the "active-filter" class to the clicked element
+    $(`#${element}`).addClass("active-filter");
+  }
 
-  if (element == "default") {
-    $("#container-title").text("All products");
-  } else {
-    $("#container-title").text(element);
+  // change the heading corresponding to the product type
+  switch (element) {
+    case "men-clothes":
+      $("#container-title").text("Men's Clothing");
+      break;
+    case "women-clothes":
+      $("#container-title").text("Women's Clothing");
+      break;
+    case "jewel":
+      $("#container-title").text("Jewelry");
+      break;
+    case "tech":
+      $("#container-title").text("Technology");
+      break;
+    default:
+      $("#container-title").text("All products");
+      break;
   }
 }
 
@@ -86,9 +101,13 @@ function showDefault() {
   clearContent("default");
   getProducts();
 }
-function showClothes() {
-  clearContent("clothes")
+function showMenClothes() {
+  clearContent("men-clothes")
   getProducts("men's clothing");
+}
+function showWomenClothes() {
+  clearContent("women-clothes")
+  getProducts("women's clothing");
 }
 
 function showJewel() {
