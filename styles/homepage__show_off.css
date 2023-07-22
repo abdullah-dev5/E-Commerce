@@ -1,5 +1,6 @@
 #show-off {
   padding: 3rem 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,17 +14,16 @@
 @media (max-width:768px) {
   #show-off {
     margin: 1rem;
-    justify-content: center;
+    padding: 0;
+    display: block;
     flex-wrap: wrap-reverse;
   }
 
-  #show-off div {
-    justify-content: center;
-    align-items: center;
+  #show-off .space-50 {
+    width: 100%;
   }
-
   #show-off img {
-    max-width: 90%;
+    width: 90%;
     display: blocks;
     margin: 0 auto;
   }
