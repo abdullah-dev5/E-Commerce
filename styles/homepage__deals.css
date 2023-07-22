@@ -16,6 +16,7 @@
 #deals {
   background-color: var(--grey-500);
   padding: 10%;
+
 }
 
 .card-container {
@@ -98,11 +99,23 @@
   border-radius: 24px;
   margin-top: 24px;
 }
-@media(max-width: 768px){
-  h2{
+
+.custom-scrollbar {
+  max-height: 300px;
+  /* Set a maximum height to enable scrolling */
+}
+
+.custom-scrollbar .simplebar-scrollbar:before {
+  background-color: #5523DE;
+  /* Color of the scrollbar thumb */
+}
+
+@media(max-width: 768px) {
+  h2 {
     font-size: 2rem;
   }
-  #deals{
+
+  #deals {
     padding: 1rem;
   }
 }
