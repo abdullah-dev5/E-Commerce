@@ -10,7 +10,9 @@
 #show-off img {
   border-radius: 1rem;
 }
-
+#order-now-btn{
+  margin-top: 1rem;
+}
 @media (max-width:768px) {
   #show-off {
     margin: 1rem;

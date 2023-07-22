@@ -77,7 +77,7 @@ nav {
   width: 100%;
   z-index: 1;
   border-radius: 2rem;
-  background: rgba(7, 1, 22, 0.3);
+  background: rgb(57 57 57 / 30%);
   backdrop-filter: blur(12px);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -92,7 +92,6 @@ nav {
 
 #brand-logo img {
   width: 200px;
-  height: auto;
   object-fit: contain;
 }
 
@@ -156,15 +155,16 @@ footer {
 }
 
 .button-solid {
-  padding: 8px;
+  padding: 0.75rem;
   border: none;
   color: #fff;
+  cursor: pointer;
 
   background-color: var(--purple-500);
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 700;
 
-  border-radius: 4px;
+  border-radius: 1.5rem;
 
   transition: background 0.2s ease-out;
 }
