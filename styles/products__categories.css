@@ -36,12 +36,14 @@ header h1 {
   border-radius: 1.5rem;
 }
 
-.category:first-child{
+.category:first-child {
   border-radius: 2rem 0 0 2rem;
 }
-.category:last-child{
+
+.category:last-child {
   border-radius: 0 2rem 2rem 0;
 }
+
 .category {
   background-color: var(--purple-300);
   padding: 1rem;
