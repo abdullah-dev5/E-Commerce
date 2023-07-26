@@ -32,7 +32,6 @@ async function getProducts(category) {
   }
 }
 
-getProducts();
 
 function buildCard(product) {
   // Hard coding the brands
@@ -55,7 +54,7 @@ function buildCard(product) {
         <p class="heading">${product.title}</p>\n
         <p class="brand">${brand}</p>\n
         <p class="price">${"$ " + product.price}</p>\n
-        <button class="button-solid" type="button">More Info</button>\n
+        <button class="button-solid" type="button">Add to Cart</button>\n
       </div>\n
     </div>\n
   </div>\n`;
@@ -119,3 +118,5 @@ function showTech() {
   clearContent("tech");
   getProducts("electronics");
 }
+
+getProducts(); //! LOADS PRODUCTS. DO NOT REMOVE!
