@@ -1,5 +1,4 @@
-let prods = []; // store the response from the API
-let chosenProducts = [];
+let chosenProducts = []; //stores the user selected products
 
 async function getProducts(category) {
   let URL = '';
@@ -32,6 +31,7 @@ async function getProducts(category) {
   }
 }
 
+//? Builds the product cards from the API response 
 function buildCard(product) {
 
   // Hard coding the brands
@@ -63,7 +63,7 @@ function buildCard(product) {
   $("#products-container").append(html);
 }
 
-// FILTER(s)
+//? FILTER(s)
 function showDefault() {
   clearContent("default");
   getProducts();
@@ -87,6 +87,7 @@ function showTech() {
   getProducts("electronics");
 }
 
+//? Utility function. Used to clear the previous response 
 function clearContent(element) {
   // Clear the content of "products-container"
   $("#products-container").empty();
@@ -124,6 +125,7 @@ function clearContent(element) {
   $("#container-title").text(title);
 }
 
+//? this function is triggered each time a user clicks "Add to cart".
 function addCart() {
   // Attach event listener using event delegation to #products-container
   $("#products-container").on("click", ".add-cart", function () {
@@ -149,20 +151,25 @@ function addCart() {
   });
 }
 
+//? this functions loads all the user selected products into the cart. 
 function showCartProducts() {
   let totalItemCount = chosenProducts.length;
-  let totalPrice = 0; // Initialize totalPrice to 0
+  let totalPrice = 0;
 
+  // clear the previous result in cart container
   $("#cart-products-container").empty();
 
+  // run a loop for every user selected item.
   chosenProducts.forEach((item) => {
     totalPrice += item.price;
     buildCartCard(item);
   });
-  $("#total-products").text(totalItemCount);
-  $("#total-price").text(`$${totalPrice.toFixed(2)}`); // Display totalPrice with 2 decimal places
+
+  $("#total-products").text(totalItemCount); // display total products in the cart
+  $("#total-price").text(`$${totalPrice.toFixed(2)}`); // display sum of total amount of user selected products
 }
 
+//? Builds cards for the Cart Section. 
 function buildCartCard(item) {
   let html = `
   <div class="cart-card">\n
@@ -175,15 +182,10 @@ function buildCartCard(item) {
   </div>\n
   <hr>\n`;
 
-  // Corrected the selector to prepend the card to cart-products-container
+  // Adds cards into the Cards container.
   $("#cart-products-container").append(html);
 }
 
-
-// getProducts(); //! LOADS PRODUCTS. DO NOT REMOVE!
-// addCart();
-
 function showCart() {
   $("#cart").toggle();
-
 }
