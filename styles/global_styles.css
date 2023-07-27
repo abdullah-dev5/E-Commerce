@@ -71,12 +71,12 @@ h2 {
 
 /* navbar STARTED */
 nav {
-  margin: 0.5rem 1rem;
+  /* margin: 0.5rem 1rem; */
   padding: 0.5rem 1rem;
   position: fixed;
   width: 100%;
   z-index: 1;
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   background: rgb(57 57 57 / 30%);
   backdrop-filter: blur(12px);
   display: grid;
@@ -96,13 +96,20 @@ nav {
 }
 
 #cart-logo {
-  justify-self: end;
   /* Align the cart logo to the right */
+  justify-self: end;
+  padding: 0.25rem;
+  transition: filter 0.3s ease-in-out;
 }
 
 #cart-logo img {
   aspect-ratio: 1/1;
   width: 24px;
+}
+
+#cart-logo:hover {
+  /* background-color: var(--purple-100); */
+  filter: grayscale(100%);
 }
 
 #nav-links {
@@ -131,13 +138,14 @@ a:hover {
   color: #fff;
   background-color: var(--purple-500);
 }
+
 /* navbar ENDED */
 
-#divider {
+.divider {
   width: 100%;
 }
 
-#divider img {
+.divider img {
   width: 100%;
   object-fit: fill;
 }

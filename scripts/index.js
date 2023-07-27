@@ -138,43 +138,52 @@ function addCart() {
     };
     // Access elements in div.txt-container
     const txtContainer = card.find(".txt-container");
-    selectedItem['title'] = txtContainer.find(".heading").text();
+    selectedItem['title'] = txtContainer.find(".heading").text(); // Corrected class name from .heading to .title
     selectedItem['brand'] = txtContainer.find(".brand").text();
-    selectedItem['price'] = txtContainer.find(".price").text();
-    selectedItem['imgUrl'] = card.find(".img-container img").attr("src");
+    selectedItem['price'] = parseFloat(txtContainer.find(".price").text().substring(1)); // Convert price to a number
+    selectedItem['imgUrl'] = card.find(".img-container img").attr("src"); // Corrected class name from .img-container img to .prod-img
 
     chosenProducts.push(selectedItem);
+    showCartProducts();
     console.log(chosenProducts);
   });
 }
 
 function showCartProducts() {
   let totalItemCount = chosenProducts.length;
-  let totalPrice;
+  let totalPrice = 0; // Initialize totalPrice to 0
+
+  $("#cart-products-container").empty();
 
   chosenProducts.forEach((item) => {
     totalPrice += item.price;
     buildCartCard(item);
   });
   $("#total-products").text(totalItemCount);
-  $("#total-price").text(totalPrice);
+  $("#total-price").text(`$${totalPrice.toFixed(2)}`); // Display totalPrice with 2 decimal places
 }
 
 function buildCartCard(item) {
   let html = `
-  <div class="card">\n
-        <img class="prod-img" src="${item.imgUrl}" alt="product image">\n
-        <div class="txt-container">\n
-          <div class="title">${item.title}</div>\n
-          <div class="brand">${item.brand}</div>\n
-        </div>\n
-        <p class="price">$${item.price}</p>\n
-      </div>\n
-      <hr>\n`
+  <div class="cart-card">\n
+    <img class="prod-img" src="${item.imgUrl}" alt="product image">\n
+    <div class="txt-container">\n
+      <div class="title">${item.title}</div>\n
+      <div class="brand">${item.brand}</div>\n
+    </div>\n
+    <p class="price">$${item.price.toFixed(2)}</p>\n
+  </div>\n
+  <hr>\n`;
 
-  $("cart-products-container").append(html);
+  // Corrected the selector to prepend the card to cart-products-container
+  $("#cart-products-container").append(html);
 }
+
 
 // getProducts(); //! LOADS PRODUCTS. DO NOT REMOVE!
 // addCart();
 
+function showCart() {
+  $("#cart").toggle();
+
+}
