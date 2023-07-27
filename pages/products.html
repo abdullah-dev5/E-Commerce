@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body onload="getProducts(); addCart();">
   <nav>
     <div id="brand-logo">
       <img src="../assets/main_logo.svg" alt="brand logo">
@@ -24,18 +24,23 @@
       <a href="products.html" id="active">Products</a>
       <a href="#">About</a>
     </div>
-    <div id="cart-logo"><img src="../assets/icons/icon_cart.svg" alt="cart icon"></div>
+    <div id="cart-logo">
+      <a href="cart.html"><img src="../assets/icons/icon_cart.svg" alt="cart icon"></a>
+    </div>
   </nav>
   <main>
     <header>
       <h1 id="container-title">All Products</h1>
       <!-- <hr> -->
       <section id="categories">
-        <div id="default" class="category" onclick="showDefault();"><i class="fa-regular fa-circle-xmark fa-xl"></i>  Clear Filters</div>
-        <div id="men-clothes" class="category" onclick="showMenClothes();"><i class="fa-solid fa-mars fa-xl"></i> Clothes</div>
-        <div id="women-clothes" class="category" onclick="showWomenClothes();"><i class="fa-solid fa-venus fa-xl"></i>  Clothes</div>
-        <div id="jewel" class="category" onclick="showJewel();"><i class="fa-regular fa-gem fa-xl"></i>  Jewelry</div>
-        <div id="tech" class="category" onclick="showTech();"><i class="fa-solid fa-headphones fa-xl"></i>  Tech</div>
+        <div id="default" class="category" onclick="showDefault();"><i class="fa-regular fa-circle-xmark fa-xl"></i>
+          Clear Filters</div>
+        <div id="men-clothes" class="category" onclick="showMenClothes();"><i class="fa-solid fa-mars fa-xl"></i>
+          Clothes</div>
+        <div id="women-clothes" class="category" onclick="showWomenClothes();"><i class="fa-solid fa-venus fa-xl"></i>
+          Clothes</div>
+        <div id="jewel" class="category" onclick="showJewel();"><i class="fa-regular fa-gem fa-xl"></i> Jewelry</div>
+        <div id="tech" class="category" onclick="showTech();"><i class="fa-solid fa-headphones fa-xl"></i> Tech</div>
       </section>
       <!-- <hr> -->
       <div id="products-container">

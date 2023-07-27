@@ -32,7 +32,6 @@ async function getProducts(category) {
   }
 }
 
-
 function buildCard(product) {
 
   // Hard coding the brands
@@ -62,11 +61,30 @@ function buildCard(product) {
 
   // get the card container
   $("#products-container").append(html);
-  // Adds event listeners on buttons
-  $(".add-cart").on("click", () => {
-    chosenProducts.push(product);
-    console.log(product);
-  });
+}
+
+// FILTER(s)
+function showDefault() {
+  clearContent("default");
+  getProducts();
+}
+function showMenClothes() {
+  clearContent("men-clothes")
+  getProducts("men's clothing");
+}
+function showWomenClothes() {
+  clearContent("women-clothes")
+  getProducts("women's clothing");
+}
+
+function showJewel() {
+  clearContent("jewel")
+  getProducts("jewelery");
+}
+
+function showTech() {
+  clearContent("tech");
+  getProducts("electronics");
 }
 
 function clearContent(element) {
@@ -104,31 +122,59 @@ function clearContent(element) {
   }
   // Set the title of the Container Heading
   $("#container-title").text(title);
-
 }
 
-// FILTER(s)
-function showDefault() {
-  clearContent("default");
-  getProducts();
-}
-function showMenClothes() {
-  clearContent("men-clothes")
-  getProducts("men's clothing");
-}
-function showWomenClothes() {
-  clearContent("women-clothes")
-  getProducts("women's clothing");
+function addCart() {
+  // Attach event listener using event delegation to #products-container
+  $("#products-container").on("click", ".add-cart", function () {
+    // Find the parent card of the button
+    const card = $(this).closest(".card");
+
+    let selectedItem = {
+      title: "",
+      brand: "",
+      price: "",
+      imgUrl: "",
+    };
+    // Access elements in div.txt-container
+    const txtContainer = card.find(".txt-container");
+    selectedItem['title'] = txtContainer.find(".heading").text();
+    selectedItem['brand'] = txtContainer.find(".brand").text();
+    selectedItem['price'] = txtContainer.find(".price").text();
+    selectedItem['imgUrl'] = card.find(".img-container img").attr("src");
+
+    chosenProducts.push(selectedItem);
+    console.log(chosenProducts);
+  });
 }
 
-function showJewel() {
-  clearContent("jewel")
-  getProducts("jewelery");
+function showCartProducts() {
+  let totalItemCount = chosenProducts.length;
+  let totalPrice;
+
+  chosenProducts.forEach((item) => {
+    totalPrice += item.price;
+    buildCartCard(item);
+  });
+  $("#total-products").text(totalItemCount);
+  $("#total-price").text(totalPrice);
 }
 
-function showTech() {
-  clearContent("tech");
-  getProducts("electronics");
+function buildCartCard(item) {
+  let html = `
+  <div class="card">\n
+        <img class="prod-img" src="${item.imgUrl}" alt="product image">\n
+        <div class="txt-container">\n
+          <div class="title">${item.title}</div>\n
+          <div class="brand">${item.brand}</div>\n
+        </div>\n
+        <p class="price">$${item.price}</p>\n
+      </div>\n
+      <hr>\n`
+
+  $("cart-products-container").append(html);
 }
 
-getProducts(); //! LOADS PRODUCTS. DO NOT REMOVE!
+// getProducts(); //! LOADS PRODUCTS. DO NOT REMOVE!
+// addCart();
+
