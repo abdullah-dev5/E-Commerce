@@ -50,6 +50,11 @@
   background-color: var(--purple-800);
 }
 
+#social-link-container a {
+  background-color: none;
+  padding: 0;
+}
+
 .social-link i {
   color: var(--purple-100);
 }

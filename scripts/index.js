@@ -138,6 +138,7 @@ function addCart() {
       price: "",
       imgUrl: "",
     };
+    
     // Access elements in div.txt-container
     const txtContainer = card.find(".txt-container");
     selectedItem['title'] = txtContainer.find(".heading").text(); // Corrected class name from .heading to .title
@@ -188,4 +189,10 @@ function buildCartCard(item) {
 
 function showCart() {
   $("#cart").toggle();
+}
+function closeCheckout(){
+  $("#checkout").toggle();
+}
+if(chosenProducts.length > 0){
+  $("#toCheckout").removeAttr("disabled");
 }

@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Browse All Products - GadgetWala</title>
+  <title>Products - GadgetWala</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+
 
   <script src="https://kit.fontawesome.com/8d6806cdef.js" crossorigin="anonymous"></script>
 
@@ -12,6 +14,7 @@
 
   <link rel="stylesheet" href="../styles/products__categories.css" />
   <link rel="stylesheet" href="../styles/products__cart.css">
+  <link rel="stylesheet" href="../styles/products__checkout.css">
 
 </head>
 
@@ -23,7 +26,7 @@
     <div id="nav-links" class="fl-row js-center">
       <a href="../index.html">Home</a>
       <a href="products.html" id="active">Products</a>
-      <a href="#">About</a>
+      <a href="../index.html#contact">About</a>
     </div>
     <div id="cart-logo">
       <img onclick="showCart();" src="../assets/icons/icon_cart.svg" alt="cart icon">
@@ -74,9 +77,46 @@
         <p id="total-price"></p>
       </div>
     </div>
-    <button class="button-solid">Proceed to checkout</button>
+    <button class="button-solid" id="toCheckout" onclick="closeCheckout();">Proceed to checkout</button>
   </section>
 
+  <section id="checkout">
+    <form action="https://formsubmit.co/arainsaab083@gmail.com" method="POST" >
+      <div id="close" onclick="closeCheckout();"><i class="fa-solid fa-x fa-sm"></i></div>
+
+      <!-- Advanced Features from Formsubmit.co -->
+      <input type="hidden" name="_subject" value="Submission from E-Commerce Store">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <label for="username">Name:</label>
+      <input type="text" name="username" id="useraname" placeholder="Name">
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="Email">
+
+      <label for="contact-number">Contact Number:</label>
+      <input type="tel" name="contact-number" id="contact" placeholder="Contact Number">
+
+      <label for="address">Address: </label>
+      <input type="text" name="address" id="address" placeholder="Address">
+
+      <div>
+        <input type="radio" name="payment" value="Cash" id="Cash">
+        <label for="Cash">Cash</label>
+      </div>
+      <div>
+        <input type="radio" name="payment" value="Credit Card" id="Credit-Card">
+        <label for="Credit-Card">Credit Card</label>
+      </div>
+      <div>
+        <input type="radio" name="payment" value="Easypaisa" id="Easypaisa">
+        <label for="Easypaisa">Easypaisa</label>
+      </div>
+
+      <input class="button-solid" type="submit" value="Submit">
+    </form>
+  </section>
   <footer class="fl-row">
     <div class="space-50">
       <p>GadgetWala 2023 &copy; All rights reserved.</p>
