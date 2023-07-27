@@ -1,4 +1,5 @@
 let prods = []; // store the response from the API
+let chosenProducts = [];
 
 async function getProducts(category) {
   let URL = '';
@@ -21,7 +22,6 @@ async function getProducts(category) {
 
     if (Array.isArray(json)) {
       json.forEach((element) => {
-
         buildCard(element);
       });
     } else {
@@ -34,6 +34,7 @@ async function getProducts(category) {
 
 
 function buildCard(product) {
+
   // Hard coding the brands
   const brands = ["Apple inc.", "Xiaomi inc.", "Google LLC", "Outfitters", "Faberge", "Versace", "Gucci", "Ferrero Rochet"];
   // select one of the brands randomly
@@ -54,13 +55,18 @@ function buildCard(product) {
         <p class="heading">${product.title}</p>\n
         <p class="brand">${brand}</p>\n
         <p class="price">${"$ " + product.price}</p>\n
-        <button class="button-solid" type="button">Add to Cart</button>\n
+        <button class="button-solid add-cart" type="button">Add to Cart</button>\n
       </div>\n
     </div>\n
   </div>\n`;
 
   // get the card container
   $("#products-container").append(html);
+  // Adds event listeners on buttons
+  $(".add-cart").on("click", () => {
+    chosenProducts.push(product);
+    console.log(product);
+  });
 }
 
 function clearContent(element) {
@@ -71,28 +77,34 @@ function clearContent(element) {
   $("#categories .category").removeClass("active-filter");
 
   if (element != "default") {
-    // Add the "active-filter" class to the clicked element
+    // Add the "active-filter" class to the clicked element.
+    // IF the filter is NOT default.
     $(`#${element}`).addClass("active-filter");
   }
 
+  // stores the title of the container heading.
+  let title = '';
   // change the heading corresponding to the product type
   switch (element) {
     case "men-clothes":
-      $("#container-title").text("Men's Clothing");
+      title = "Men's Clothing";
       break;
     case "women-clothes":
-      $("#container-title").text("Women's Clothing");
+      title = "Women's Clothing";
       break;
     case "jewel":
-      $("#container-title").text("Jewelry");
+      title = "Jewelry";
       break;
     case "tech":
-      $("#container-title").text("Technology");
+      title = "Technology";
       break;
     default:
-      $("#container-title").text("All products");
+      title = "All products";
       break;
   }
+  // Set the title of the Container Heading
+  $("#container-title").text(title);
+
 }
 
 // FILTER(s)
