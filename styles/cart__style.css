@@ -27,10 +27,7 @@ header h1 {
   min-height: 100vh;
   margin: 1rem 150px;
   padding: 1rem;
-
 }
-
-
 
 @media (max-width:768px) {
   #cart-products-container {

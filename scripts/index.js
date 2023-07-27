@@ -138,7 +138,7 @@ function addCart() {
       price: "",
       imgUrl: "",
     };
-    
+
     // Access elements in div.txt-container
     const txtContainer = card.find(".txt-container");
     selectedItem['title'] = txtContainer.find(".heading").text(); // Corrected class name from .heading to .title
@@ -149,6 +149,7 @@ function addCart() {
     chosenProducts.push(selectedItem);
     showCartProducts();
     console.log(chosenProducts);
+    // showPopup("Item added successfully")
   });
 }
 
@@ -190,9 +191,22 @@ function buildCartCard(item) {
 function showCart() {
   $("#cart").toggle();
 }
-function closeCheckout(){
+
+function closeCheckout() {
   $("#checkout").toggle();
 }
-if(chosenProducts.length > 0){
+
+if (chosenProducts.length > 0) {
   $("#toCheckout").removeAttr("disabled");
+}
+
+function showPopup(message) {
+  let html = `<div class="success-popup">\n
+  <div class="popup-message">\n
+    <i class="fa-regular fa-circle-check fa-lg"></i>\n
+    <p>${message}</p>
+  </div>
+</div>`
+
+$("body").append(html).show().delay(100).fadeOut();
 }
