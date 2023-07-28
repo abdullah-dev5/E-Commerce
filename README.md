@@ -1,6 +1,8 @@
 # Gadget Wala - E-Commerce Website
 
-An E-Commerce store website built using front end technologies such as (HTML, CSS, JavaScript, Bootstrap).
+An E-Commerce store website built using front end technologies such as (HTML, CSS, JavaScript, Bootstrap and JQuery).
+
+![landing page of the GadgetWala website](snapshot-1.png)
 
 ## Features 
 - **Fetch API:** We use the fetch API to asynchronously fetch the products details from the web.
@@ -16,14 +18,12 @@ link
 
 ## Built With
 
-- **HTML** -
-- **CSS** - 
-- **JavaScript** - 
-- **[Bootstrap](https://getbootstrap.com/)** - The library framework used
+- **HTML** - This websites uses the latest version of HTML, that is HTML5. It also incorporates new features such as: Semantic Tags.
+- **CSS** - We used the plain version of CSS, with some occasional Bootstrap here and there.
+- **JavaScript** - This website relies heavily on JavaScript.
+- **[Bootstrap](https://getbootstrap.com/)** - The front-end library framework used.
+- **[JQuery](https://jquery.com/)** - We used JQuery for DOM manipulation, dynamically rendering content.
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
@@ -33,4 +33,4 @@ See also the list of [contributors](https://github.com/abdullah-dev5/E-Commerce/
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
