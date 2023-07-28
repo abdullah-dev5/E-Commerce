@@ -46,9 +46,10 @@ header h1 {
 }
 
 .category {
-  background-color: var(--purple-300);
+  background: var(--purple-300);
   padding: 1rem;
   color: #fff;
+  transition: background 0.3s;
 }
 
 .category:hover {
