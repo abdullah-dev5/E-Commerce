@@ -208,5 +208,15 @@ function showPopup(message) {
   </div>
 </div>`
 
-$("body").append(html).show().delay(100).fadeOut();
+  $("body").append(html).show().delay(100).fadeOut();
+}
+function showNavigation() {
+  // If the navbar is HIDDEN make it visible.
+  if ($("#nav-links").css("visibility") == "hidden") {
+    $("#nav-links").css("visibility", "visible");
+  } 
+  // else make it HIDDEN
+  else {
+    $("#nav-links").css("visibility", "hidden");
+  }
 }
