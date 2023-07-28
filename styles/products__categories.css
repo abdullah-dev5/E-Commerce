@@ -148,7 +148,19 @@ header h1 {
   }
 
   #categories {
+    flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .category {
+    border-radius: 0 !important;
+    padding: 1rem 0.5rem;
+    width: 25%;
+  }
+
+  .category:first-child {
+    padding: 1rem;
+    width: 100%;
   }
 
   #products-container {
@@ -156,4 +168,7 @@ header h1 {
     gap: 1rem;
     padding: 3rem 1rem;
   }
+#container-title {
+  font-size: 3rem;
+}
 }

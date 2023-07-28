@@ -93,7 +93,12 @@ nav {
   justify-self: start;
   /* Align the brand logo to the left */
 }
-
+#brand-logo a {
+  padding: 0;
+}
+#brand-logo a:hover{
+  background-color: unset;
+}
 #brand-logo img {
   width: 200px;
   object-fit: contain;
