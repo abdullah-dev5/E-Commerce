@@ -7,15 +7,15 @@ An E-Commerce store website built using front end technologies such as (HTML, CS
 
 ## Features
 
-- **`Fetch API:`** We use the fetch API to asynchronously fetch the products details from the web.
-- **`Dynamic Content Rendering:`** We use JavaScript to dynamically render the API content on the screen such as: Products Cards, Cart Cards.
-- **`Filters:`** We used JavaScript to apply product filtration.
-- **`Responsive UI:`** The UI is optimized and will perform well on smaller screens, as well as larger screens.
+- **Fetch API:** We use the fetch API to asynchronously fetch the products details from the web.
+- **Dynamic Content Rendering:** We use JavaScript to dynamically render the API content on the screen such as: Products Cards, Cart Cards.
+- **Filters:** We used JavaScript to apply product filtration.
+- **Responsive UI:** The UI is optimized and will perform well on smaller screens, as well as larger screens.
 
 ## Get a Preview
 
 ```txt
-link
+https://abdullah-dev5.github.io/E-Commerce
 ```
 
 ## Built With
