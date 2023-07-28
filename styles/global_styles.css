@@ -123,7 +123,7 @@ nav {
   gap: 0.5rem;
 }
 
-a {
+nav a {
   padding: 8px 16px;
   border-radius: 1.5rem;
   text-decoration: none;
@@ -134,7 +134,7 @@ a {
   color: #fff;
 }
 
-a:hover {
+nav a:hover {
   background-color: var(--purple-300);
 }
 
