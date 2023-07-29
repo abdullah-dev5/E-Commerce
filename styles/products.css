@@ -1,0 +1,23 @@
+#cart-logo {
+  position: relative;
+}
+
+#cart-counter {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 4px;
+  
+  background-color: var(--purple-900);
+  border-radius: 1rem;
+
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
