@@ -20,18 +20,18 @@
 
 <body>
   <nav>
-    <div id="brand-logo">
+    <div id="brand-logo" title="GadgetWala Homepage">
       <a href="index.html"><img src="assets/main_logo.svg" alt="brand logo"></a>
     </div>
     <div id="nav-links">
-      <a href="index.html" id="active">Home</a>
-      <a href="pages/products.html">Products</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" id="active" title="Homepage">Home</a>
+      <a href="pages/products.html" title="Products Page">Products</a>
+      <a href="#contact" title="Contacts Page">Contact</a>
     </div>
-    <div id="cart-logo" style="visibility: hidden;">
+    <div id="cart-logo" style="visibility: hidden;" title="Open your Cart">
       <i class="fa-solid fa-cart-shopping"></i>
     </div>
-    <div id="hamburger-icon" onclick="showNavigation();">
+    <div id="hamburger-icon" onclick="showNavigation();" title="Show More">
       <i class="fa-solid fa-bars"></i>
     </div>
   </nav>
@@ -49,7 +49,7 @@
           </div>
           <div id="search-menu">
             <input class="" type="text" name="search product" placeholder="What are you looking for?">
-            <button class="button-solid" type="submit">Search</button>
+            <button class="button-solid" type="submit" title="Search">Search</button>
           </div>
         </div>
         <div class="space-50" id="hero-img-container">
@@ -67,8 +67,11 @@
       <div class="space-50">
         <h2>50+ Products</h2>
         <p>Shop from a range of 50+ exciting products</p>
-        <a href="pages/products.html"><button class="button-solid" id="order-now-btn" type="submit" value="submit"
-            name="Order Now">Order Now</button></a>
+        <a href="pages/products.html">
+          <button class="button-solid" id="order-now-btn" type="submit" value="submit" title="Order Now" name="Order Now">
+            Order Now
+          </button>
+        </a>
       </div>
     </section>
 

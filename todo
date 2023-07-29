@@ -7,7 +7,14 @@
 [✅] - recolor the cart and checkout
 [✅] - make the navbar responsive
 
-[] - add quantity functionality
+[] - remove product
+[] - numbering in cart
+[✅] - add quantity functionality
+[] - option to close the cart
+[] - add a filter's heading
+[] - adding names for accessability
+  [✅] - In homepage 
+  [] - In products page 
 [] - work on the popup message
 
 [] - make the categories bar responsive

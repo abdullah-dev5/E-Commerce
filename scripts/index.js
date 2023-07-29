@@ -129,23 +129,43 @@ function clearContent(element) {
 function addCart() {
   // Attach event listener using event delegation to #products-container
   $("#products-container").on("click", ".add-cart", function () {
+
+    let productFound = false;
+
     // Find the parent card of the button
     const card = $(this).closest(".card");
 
+    // Access elements in div.txt-container
+    const txtContainer = card.find(".txt-container");
+    const title = txtContainer.find(".heading").text();
+
+    chosenProducts.forEach((item) => {
+      if (item.title == title) {
+        item.quantity++;
+        productFound = true;
+        return;
+      }
+    });
+
+    // if the product is found. Exit this function.
+    if (productFound) {
+      showCartProducts();
+      return
+    };
+
+    console.log("Still Adding Product")
     let selectedItem = {
       title: "",
       brand: "",
       price: "",
       imgUrl: "",
+      quantity: 1,
     };
 
-    // Access elements in div.txt-container
-    const txtContainer = card.find(".txt-container");
-    selectedItem['title'] = txtContainer.find(".heading").text(); // Corrected class name from .heading to .title
+    selectedItem['title'] = txtContainer.find(".heading").text();
     selectedItem['brand'] = txtContainer.find(".brand").text();
-    selectedItem['price'] = parseFloat(txtContainer.find(".price").text().substring(1)); // Convert price to a number
-    selectedItem['imgUrl'] = card.find(".img-container img").attr("src"); // Corrected class name from .img-container img to .prod-img
-
+    selectedItem['price'] = parseFloat(txtContainer.find(".price").text().substring(1));
+    selectedItem['imgUrl'] = card.find(".img-container img").attr("src");
     chosenProducts.push(selectedItem);
     showCartProducts();
     console.log(chosenProducts);
@@ -177,8 +197,11 @@ function buildCartCard(item) {
   <div class="cart-card">\n
     <img class="prod-img" src="${item.imgUrl}" alt="product image">\n
     <div class="txt-container">\n
-      <div class="title">${item.title}</div>\n
-      <div class="brand">${item.brand}</div>\n
+      <div>
+        <div class="title">${item.title}</div>\n
+        <div class="brand">${item.brand}</div>\n
+        <div class="quantity">Qty. x ${item.quantity}</div>\n
+      </div>
     </div>\n
     <p class="price">$${item.price.toFixed(2)}</p>\n
   </div>\n
@@ -214,7 +237,7 @@ function showNavigation() {
   // If the navbar is HIDDEN make it visible.
   if ($("#nav-links").css("visibility") == "hidden") {
     $("#nav-links").css("visibility", "visible");
-  } 
+  }
   // else make it HIDDEN
   else {
     $("#nav-links").css("visibility", "hidden");

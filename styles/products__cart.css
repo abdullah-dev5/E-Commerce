@@ -22,7 +22,12 @@
   grid-template-columns: 0.5fr 2fr 0.5fr;
   align-items: center;
 }
-
+.cart-card .txt-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .title {
   font-size: 1rem;
   font-weight: 700;
@@ -38,6 +43,10 @@
   margin-top: 1.5rem;
 }
 
+.quantity {
+  font-size: 0.85rem;
+  font-weight: bold;
+}
 .cart-card img {
   border-radius: 1rem;
   width: 100px;
