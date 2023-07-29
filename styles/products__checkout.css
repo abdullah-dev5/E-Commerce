@@ -20,6 +20,8 @@
   background-color: var(--grey-500);
   padding: 1.5rem;
   border-radius: 1rem;
+
+  overflow-y: visible;
 }
 
 form input {
