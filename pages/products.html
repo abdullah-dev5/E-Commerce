@@ -69,8 +69,8 @@
           <div>
             <div class="title">${item.title}</div>
             <div class="brand">${item.brand}</div>
-            <div class="quantity">Qty. x ${item.quantity}</div>
           </div>
+          <div class="quantity">Qty. x ${item.quantity}</div>
         </div>
         <p class="price">$${item.price.toFixed(2)}</p>
       </div>
@@ -91,7 +91,7 @@
   </section>
 
   <section id="checkout">
-    <form action="https://formsubmit.co/arainsaab083@gmail.com" method="POST" >
+    <form action="https://formsubmit.co/arainsaab083@gmail.com" method="POST">
       <div id="close" onclick="closeCheckout();"><i class="fa-solid fa-x fa-sm"></i></div>
 
       <!-- Advanced Features from Formsubmit.co -->
@@ -118,10 +118,33 @@
       <div>
         <input type="radio" name="payment" value="Credit Card" id="Credit-Card">
         <label for="Credit-Card">Credit Card</label>
+        <div id="card-detail">
+
+          <div class="credit-card-details">
+            <label for="card-number">Card Number:</label>
+            <input type="number" name="card number" id="card-number" placeholder="Card number" minlength="4">
+
+            <label for="CVV">CVV:</label>
+            <input type="number" name="cvv" id="CVV" placeholder="CVV" maxlength="3" />
+
+            <div class="expiry-date">
+              <label for="card-month">Expiry Date</label>
+              <input type="number" name="card expiry (month)" id="card-month" placeholder="mm" maxlength="2">
+              <input type="number" name="card expiry (year)" id="card-year" placeholder="yy" maxlength="2">
+            </div>
+          </div>
+        </div>
+
       </div>
       <div>
         <input type="radio" name="payment" value="Easypaisa" id="Easypaisa">
         <label for="Easypaisa">Easypaisa</label>
+        <div id="easypaisa-num">
+          <div class="fl-col">
+            <label for="easypaisa-number">Easypaisa Number:</label>
+            <input type="tel" name="easypaisa number" id="easypaisa-number" placeholder="Number">
+          </div>
+        </div>
       </div>
 
       <input class="button-solid" type="submit" value="Submit">

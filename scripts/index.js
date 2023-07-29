@@ -208,8 +208,8 @@ function buildCartCard(item) {
       <div>
         <div class="title">${item.title}</div>\n
         <div class="brand">${item.brand}</div>\n
-        <div class="quantity">Qty. x ${item.quantity}</div>\n
       </div>
+      <div class="quantity">Qty. x ${item.quantity}</div>\n
     </div>\n
     <p class="price">$${item.price.toFixed(2)}</p>\n
   </div>\n
@@ -276,4 +276,20 @@ $("#cart-products-container").on("click", ".cart-card #remove-item", function ()
 
   // Update the cart products display
   showCartProducts();
+});
+
+$("#Credit-Card").change(function () {
+  // Check if the radio button is checked
+  if ($(this).is(":checked")) {
+    // Display the credit card details div
+    $("#card-detail").toggle();
+  }
+});
+
+$("#Easypaisa").change(function () {
+  // Check if the radio button is checked
+  if ($(this).is(":checked")) {
+    // Display the credit card details div
+    $("#easypaisa-num").toggle();
+  }
 });

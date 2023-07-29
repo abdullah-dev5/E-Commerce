@@ -34,11 +34,49 @@ form label {
   margin-bottom: 0;
 }
 
-#close{
+#card-detail {
+  display: none;
+}
+#easypaisa-num {
+  display: none;
+}
+form .credit-card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.credit-card-details .expiry-date {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+
+.expiry-date label {
+  width: 100%;
+}
+
+.expiry-date input {
+  width: 50%;
+}
+
+#close {
   padding: 0.5rem;
   color: var(--purple-600);
   margin-left: 90%;
 }
-#close:hover{
+
+#close:hover {
   color: var(--purple-900);
+}
+
+@media (max-width:768px) {
+  #checkout form {
+    width: 100%;
+    height: 100%;
+  }
+
+  form label {
+    font-weight: bold;
+  }
 }
