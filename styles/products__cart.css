@@ -21,6 +21,13 @@
   display: grid;
   grid-template-columns: 0.5fr 2fr 0.5fr;
   align-items: center;
+  position: relative;
+}
+#remove-item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 }
 .cart-card .txt-container {
   height: 100%;

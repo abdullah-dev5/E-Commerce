@@ -63,13 +63,18 @@
     <h1 id="cart-container-title">Your Cart</h1>
     <div id="cart-products-container">
       <div class="cart-card">
-        <img src="https://picsum.photos/100" alt="product image">
-        <div>
-          <p class="title">I am Title</p>
-          <p class="brand">Xiaomi inc.</p>
+        <div id="remove-item"><i class="fa-regular fa-trash-can"></i></div>
+        <img class="prod-img" src="${item.imgUrl}" alt="product image">
+        <div class="txt-container">
+          <div>
+            <div class="title">${item.title}</div>
+            <div class="brand">${item.brand}</div>
+            <div class="quantity">Qty. x ${item.quantity}</div>
+          </div>
         </div>
-        <p class="price">100$</p>
+        <p class="price">$${item.price.toFixed(2)}</p>
       </div>
+      <hr>
     </div>
     <hr>
     <div id="total-stats">

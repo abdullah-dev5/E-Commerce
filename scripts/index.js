@@ -162,9 +162,9 @@ function addCart() {
       quantity: 1,
     };
 
-    selectedItem['title'] = txtContainer.find(".heading").text(); 
+    selectedItem['title'] = txtContainer.find(".heading").text();
     selectedItem['brand'] = txtContainer.find(".brand").text();
-    selectedItem['price'] = parseFloat(txtContainer.find(".price").text().substring(1)); 
+    selectedItem['price'] = parseFloat(txtContainer.find(".price").text().substring(1));
     selectedItem['imgUrl'] = card.find(".img-container img").attr("src");
     chosenProducts.push(selectedItem);
     showCartProducts();
@@ -180,7 +180,7 @@ function showCartProducts() {
   let totalPrice = 0;
 
   // count the quantity of all the products available in the cart.
-  chosenProducts.forEach((item)=>{
+  chosenProducts.forEach((item) => {
     totalItemCount += parseInt(item.quantity);
   });
 
@@ -196,13 +196,13 @@ function showCartProducts() {
   $("#total-products").text(totalItemCount); // display total products in the cart
   $("#cart-counter").text(totalItemCount);
   $("#total-price").text(`$${totalPrice.toFixed(2)}`); // display sum of total amount of user selected products
-
 }
 
 //? Builds cards for the Cart Section. 
 function buildCartCard(item) {
   let html = `
   <div class="cart-card">\n
+    <div id="remove-item"><i class="fa-regular fa-trash-can"></i></div>
     <img class="prod-img" src="${item.imgUrl}" alt="product image">\n
     <div class="txt-container">\n
       <div>
@@ -251,3 +251,29 @@ function showNavigation() {
     $("#nav-links").css("visibility", "hidden");
   }
 }
+
+function removeItem() {
+}
+console.log("event listener getting attached.")
+$("#cart-products-container").on("click", ".cart-card #remove-item", function () {
+  console.log("removing item");
+  // Find the parent cart card and remove it
+  const card = $(this).closest(".cart-card");
+  const txtContainer = card.find(".txt-container");
+  const title = txtContainer.find(".heading").text();
+
+
+});
+$("#cart-products-container").on("click", ".cart-card #remove-item", function () {
+  const card = $(this).closest(".cart-card");
+  const title = card.find(".title").text();
+
+  // Remove the item from the chosenProducts array
+  chosenProducts = chosenProducts.filter((item) => item.title !== title);
+
+  // Remove the cart card from the UI
+  card.remove();
+
+  // Update the cart products display
+  showCartProducts();
+});
