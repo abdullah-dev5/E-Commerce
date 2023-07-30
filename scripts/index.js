@@ -66,7 +66,7 @@ $("#Easypaisa").change(function () {
 
 gsap.from(".feature-icon", {
   y: 0,
-  x: 150,
+  x: -150,
   scrollTrigger: {
     trigger: ".feature-icon",
     scroller: "html",
