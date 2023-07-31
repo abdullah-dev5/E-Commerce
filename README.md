@@ -3,7 +3,7 @@
 ![landing page of the GadgetWala website](snapshot-1.png)
 
 ## Overview
-An E-Commerce store website built using front end technologies such as (HTML, CSS, JavaScript, Bootstrap and JQuery).
+A fully functional and completely responsive **E-Commerce store website** built using front end technologies such as (HTML, CSS, JavaScript, Bootstrap and JQuery).
 
 ## Features
 
