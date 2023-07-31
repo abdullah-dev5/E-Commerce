@@ -62,3 +62,17 @@ $("#Easypaisa").change(function () {
     $("#easypaisa-num").toggle();
   }
 });
+
+
+gsap.from(".feature-icon", {
+  y: 0,
+  x: -150,
+  scrollTrigger: {
+    trigger: ".feature-icon",
+    scroller: "html",
+    // markers:true,
+    start: "right 50%",
+    end: "right 50%",
+    scrub: 4,
+  },
+});
