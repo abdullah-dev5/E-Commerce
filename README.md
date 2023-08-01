@@ -26,6 +26,11 @@ https://abdullah-dev5.github.io/E-Commerce
 - **[Bootstrap](https://getbootstrap.com/)** - The front-end library framework used.
 - **[JQuery](https://jquery.com/)** - We used JQuery for DOM manipulation, dynamically rendering content.
 
+
+## Known Issues
+
+- **Slow Load Time:** Due to heavy amounts of uncompressed media content being displayed on the website, the load is hugely affected.
+
 ## Authors
 
 - **Muhammad Abdullah Arain** - _Logic Designing/Initial Work_ - [check out profile](https://github.com/abdullah-dev5)
